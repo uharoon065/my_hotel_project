@@ -1,0 +1,41 @@
+// mongodh shell connection string
+mongosh "mongodb+srv://cluster0.pwpl8da.mongodb.net/myFirstDatabase" --apiVersion 1 --username uharoon065 --password "nvhCX3DU3Ec0S3ip"
+{
+	"_id": "6419d5bff657b00ed152780e",
+	"title": "meriat",
+	"type": "hotel",
+	"description": "a big hotel",
+	"city": "islamabad",
+	"address": "rawal towm islamabad",
+	"distance": "20km",
+	"cheapestPrice": 325,
+	"photos": [],
+	"rooms": [],
+	"featured": false,
+	"__v": 0
+}
+// insomnia getting started guide
+https://docs.insomnia.rest/insomnia/send-your-first-request
+
+//yt video
+
+https://www.youtube.com/watch?v=k3Vfj-e1Ma4
+
+mongoose docs:-
+https://mongoosejs.com/docs/api/model.html#model_Model-findByIdAndUpdate
+{
+	"username" : "billy",
+	"email" : "usman@example.com",
+	"password" : "123123
+}
+http://localhost:3000/api/user/users
+
+http://localhost:3000/api/auth/login
+http://localhost:3000/api/auth/register
+http://localhost:3000/api/hotel/hotels
+
+http://localhost:3000/api/user/user/641db313d1542b74b61c8a6c
+http://localhost:3000/api/hotel/hotel/6419dc30f657b00ed1527810
+
+
+
