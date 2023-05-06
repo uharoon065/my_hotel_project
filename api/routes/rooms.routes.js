@@ -10,7 +10,7 @@ router.post("/reserve", roomControlers.postReserve);
 // put
 router.put("/room/:roomId", verifyAdmin, roomControlers.putUpdateRoom);
 // delete
-router.delete("/room/:roomId/:hotelId", verifyAdmin, roomControlers.deleteRoom);
+router.delete("/room/:roomId", verifyAdmin, roomControlers.deleteRoom);
 
 // get routes
 router.get("/room/:roomId", verifyAdmin, roomControlers.getRoom);

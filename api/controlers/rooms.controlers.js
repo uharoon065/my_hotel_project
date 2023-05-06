@@ -43,6 +43,7 @@ async function postRoom(req, res, next) {
   try {
     const hotelId = req.params.id;
     const roomInfo = req.body;
+    console.log(roomInfo);
     const newRoom = new Room(roomInfo);
     newRoom.HotelId = [hotelId];
     const result = await newRoom.save();
@@ -77,12 +78,15 @@ async function postReserve(req, res, next) {
 //  delete room
 async function deleteRoom(req, res, next) {
   try {
-    const hotelId = req.params.hotelId;
+    // const hotelId = req.params.hotelId;
     const result = await Room.findByIdAndDelete(req.params.roomId);
     if (!result) return next({ message: "no room found ", status: 404 });
-    await Hotel.findByIdAndUpdate(hotelId, {
-      $pull: { rooms: req.params.roomId },
-    });
+    await Hotel.updateMany(
+      {},
+      {
+        $pull: { RoomId: req.params.roomId },
+      }
+    );
 
     console.log(result);
     res.status(200).json({ message: "the roomhas been deleted" });

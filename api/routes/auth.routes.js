@@ -15,9 +15,21 @@ router.post(
       console.log(req.body);
       const username = req.body.username;
       const email = req.body.email;
+      const address = req.body.address;
+      const country = req.body.country;
+      const phone = req.body.phone;
+      const img = req.body.img;
       let password = req.body.password;
       password = await bcrypt.hash(password, 12);
-      const usr = new User({ username, email, password });
+      const usr = new User({
+        username,
+        email,
+        password,
+        country,
+        address,
+        phone,
+        img,
+      });
       const result = await usr.save();
       console.log(result);
       res.sendStatus(201);

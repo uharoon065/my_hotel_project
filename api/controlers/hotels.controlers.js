@@ -92,6 +92,7 @@ async function postHotel(req, res, next) {
     const newHotel = req.body;
     const htl = new Hotel(newHotel);
     const result = await htl.save();
+    console.log(result);
 
     res.status(201).json(result);
   } catch (error) {
